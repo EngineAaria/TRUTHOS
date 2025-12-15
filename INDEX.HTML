@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TruthOS — Verification Operating System</title>
+
+  <style>
+    :root {
+      --bg: #0e0f13;
+      --text: #e8e8e8;
+      --muted: #9aa0a6;
+      --border: #2a2d34;
+      --accent: #4da3ff;
+      --card: #151821;
+    }
+
+    [data-theme="light"] {
+      --bg: #f6f7f9;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #d1d5db;
+      --accent: #2563eb;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .toggle {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: var(--card);
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    main {
+      max-width: 980px;
+      margin: auto;
+      padding: 40px 24px;
+    }
+
+    section {
+      margin-bottom: 72px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 32px;
+    }
+
+    p {
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    code {
+      background: #00000033;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+
+<header>
+  <h1>Truth🔍S</h1>
+  <nav>
+    <a href="#mission">Mission</a>
+    <a href="#how">How It Works</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#verdicts">Verdicts</a>
+    <a href="#transparency">Transparency</a>
+    <button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="mission">
+  <h2>Verification Operating System</h2>
+  <p>
+    Truth🔍S (TruthOS) is not a news platform, opinion engine, or chatbot.
+    It is a <strong>logic-first verification operating system</strong> designed
+    to evaluate factual claims using tiered evidence, explicit reasoning,
+    and reversible conclusions.
+  </p>
+
+  <div class="card">
+    <strong>Core Guarantees</strong><br/>
+    <span class="tag">No ideology</span>
+    <span class="tag">No persuasion</span>
+    <span class="tag">No hidden logic</span>
+    <span class="tag">Evidence-weighted</span>
+    <span class="tag">Audit-ready</span>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How TruthOS Works</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>1. Claim Intake</h3>
+      <p>User submits a claim (text, link, or document). The system classifies the claim type and extracts entities and timelines.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Evidence Discovery</h3>
+      <p>Sources are discovered across regions and classified into evidence tiers.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Logical Evaluation</h3>
+      <p>Contradictions, physical constraints, and logical consistency are tested.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. Verdict Generation</h3>
+      <p>Probability-weighted verdict is assigned using deterministic rules.</p>
+    </div>
+  </div>
+</section>
+
+<section id="methodology">
+  <h2>Evidence Tier Model</h2>
+
+  <div class="card">
+    <ul>
+      <li><strong>Tier-A</strong> — Primary documents, official records, raw datasets</li>
+      <li><strong>Tier-B</strong> — Court records, audits, peer-reviewed research</li>
+      <li><strong>Tier-C</strong> — Major media (context only)</li>
+      <li><strong>Tier-D</strong> — Social media / anonymous claims (zero trust)</li>
+      <li><strong>Tier-E</strong> — Independent reporters (accuracy-scored)</li>
+    </ul>
+  </div>
+
+  <p>
+    Conclusions are probabilistic, not absolute.
+    All verdicts are subject to revision if new Tier-A or Tier-B evidence appears.
+  </p>
+</section>
+
+<section id="verdicts">
+  <h2>Verdict System</h2>
+
+  <div class="grid">
+    <div class="card"><strong>TRUE</strong><br/>≥ 90% probability</div>
+    <div class="card"><strong>LIKELY TRUE</strong><br/>70–89%</div>
+    <div class="card"><strong>MISLEADING</strong><br/>40–69%</div>
+    <div class="card"><strong>UNPROVEN</strong><br/>20–39%</div>
+    <div class="card"><strong>FALSE</strong><br/>&lt; 20%</div>
+  </div>
+
+  <p>
+    Each verdict includes evidence tiers, reasoning steps,
+    probability range, and a public audit trail.
+  </p>
+</section>
+
+<section id="transparency">
+  <h2>Transparency & Limitations</h2>
+
+  <div class="card">
+    <ul>
+      <li>No claim is verified without evidence</li>
+      <li>No verdict is final</li>
+      <li>No reasoning is hidden</li>
+      <li>Unverifiable claims are explicitly labeled</li>
+    </ul>
+  </div>
+
+  <p>
+    TruthOS reduces misinformation by exposing uncertainty,
+    not by enforcing authority or censorship.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  Truth🔍S — Verification Operating System<br/>
+  Built for audit, research, and public accountability.
+</footer>
+
+<script>
+  function toggleTheme() {
+    const body = document.body;
+    body.dataset.theme = body.dataset.theme === "dark" ? "light" : "dark";
+  }
+</script>
+
+</body>
+</html>
