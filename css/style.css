@@ -383,6 +383,9 @@ box-shadow:
 
 .pipeline-grid{
 
+max-width:1200px;
+margin:80px auto 0;
+
 display:grid;
 
 grid-template-columns:
@@ -390,20 +393,16 @@ repeat(4,1fr);
 
 gap:30px;
 
-max-width:1200px;
-
-margin:70px auto 0;
-
 }
 
 .pipeline-step{
 
-padding:35px 25px;
+padding:40px 30px;
 
 background:linear-gradient(
 180deg,
-var(--card),
-var(--card2)
+#0b1424,
+#101d33
 );
 
 border:1px solid rgba(255,255,255,.08);
@@ -412,13 +411,9 @@ border-radius:24px;
 
 text-align:center;
 
+min-height:280px;
+
 transition:.3s;
-
-min-height:260px;
-
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
 
 }
 
@@ -429,81 +424,28 @@ transform:translateY(-8px);
 border-color:rgba(0,174,239,.35);
 
 box-shadow:
-0 0 30px rgba(0,174,239,.15);
+0 0 35px rgba(0,174,239,.15);
 
 }
 
-.step-icon{
+.pipeline-lower{
 
-font-size:36px;
+display:flex;
 
-margin-bottom:20px;
+justify-content:center;
 
-}
+gap:40px;
 
-.pipeline-step h3{
-
-font-size:30px;
-
-margin-bottom:15px;
+margin-top:40px;
 
 }
 
-.pipeline-step p{
+.pipeline-lower .pipeline-step{
 
-font-size:16px;
-
-line-height:1.8;
-
-color:var(--muted);
+width:280px;
 
 }
 
-/* LOWER ROW */
-
-.pipeline-step:nth-child(5){
-
-grid-column:2;
-
-}
-
-.pipeline-step:nth-child(6){
-
-grid-column:3;
-
-}
-
-/* MOBILE */
-
-@media(max-width:1024px){
-
-.pipeline-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.pipeline-step:nth-child(5),
-.pipeline-step:nth-child(6){
-
-grid-column:auto;
-
-}
-
-}
-.pipeline{
-
-flex-direction:column;
-
-}
-
-.pipeline-arrow{
-
-transform:rotate(90deg);
-
-}
-
-}
 /* =========================
    CTA
    ========================= */
@@ -512,15 +454,25 @@ transform:rotate(90deg);
 
 text-align:center;
 
+padding:160px 0;
+
 }
 
-.cta-section h2{
-
-font-size:64px;
+.cta-section .container{
 
 max-width:900px;
 
 margin:auto;
+
+}
+
+.cta-section h2{
+
+font-size:clamp(48px,5vw,72px);
+
+line-height:1.05;
+
+font-weight:900;
 
 margin-bottom:30px;
 
@@ -530,12 +482,21 @@ margin-bottom:30px;
 
 font-size:22px;
 
+line-height:1.8;
+
 color:var(--muted);
 
 margin-bottom:40px;
 
 }
 
+.cta-section .btn-primary{
+
+padding:18px 40px;
+
+font-size:18px;
+
+}
 /* =========================
    FOOTER
    ========================= */
